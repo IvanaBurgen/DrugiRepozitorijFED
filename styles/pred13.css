@@ -1,0 +1,70 @@
+/*s ovim ovdje ispod mi neutraliziramo sve ono što nam browser daje*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*s heštegom pozivamo id wrapper koji smo zadali u glanom htmlu*/
+
+#wrapper {
+  display: grid;
+  /*100vh znači da okupira cijeli viewport, odnosno visinu pretraživača i vidljivo je na 
+    svim uređajima jednako*/
+  height: 100vh;
+  /*ovo je u biti matrica 3x3 gdje će prvi stupac biti širok 20 %, a visok isto 20% od 
+    ukupnog viewport heighta*/
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 20% 40% 40%;
+}
+
+header {
+  background-color: aqua;
+  /*početak stupca je od prve linije do zadnje, to su linije koje definiraju
+  to područje matrice i to cijelo područje će biti pofarbano u zadanu boju*/
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /*početak redova je od linije broj 1 pa do linije 2 i to će biti pofarbano*/
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+section {
+  background-color: rgb(80, 122, 122);
+  /*uzima se u obzir samo prvi stupac između prve i druge linije po redu i sve to
+  ide ispod headera, header se ne uzima u obzir, to ide po vertikali*/
+  grid-column-start: 1;
+  grid-column-end: 2;
+  /*uzima u obzir retke od 2 linije po redu do četvrte, gleda se po horizontali*/
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+/*nth of type definira samo da se uzima, u ovom slučaju, prvi po redu article koji se prikazuje*/
+/*u ovom slučaju ej definiran početak stupca od prve do druge linije
+a red je od drugog do trećeg iz naše matrice*/
+article:nth-of-type(1) {
+  background-color: rgb(149, 173, 44);
+}
+
+article:nth-of-type(2) {
+  background-color: rgb(44, 173, 119);
+}
+
+article:nth-of-type(3) {
+  background-color: rgb(8, 99, 116);
+}
+
+/*ovo u obzir uzima sve divove koji su djeca od diva*/
+
+div > div {
+  /*/ znači da se ostaje u istom direktoriju, jer je sve u istom folderu*/
+  background-image: url("/multimedia/HNK_Hajduk_Split.svg\ \(1\).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /*ovo znači da se slika renderira kao najveća veličina koja može biti tu,
+  u smislu, uzet će maksimalnu visinu tog kontejnera gdje se nalazi, pozicionirat
+  će se po njemu*/
+  background-size: contain;
+}

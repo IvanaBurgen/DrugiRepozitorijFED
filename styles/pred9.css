@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/*hover može ići na što god, npr
+a.highlight:hoverte pseudoklase se samo nadodaju na već odabrane elemente
+*/
+
+header:hover {
+  background-color: lightblue;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid blacks;
+  padding: 10px;
+}
+
+tr:nth-child(2n + 1) {
+  background-color: aqua;
+}
+
+tr:nth-child(2n) {
+  background-color: aquamarine;
+}
+
+/*100% od svog roditelja, koji god da je
+*/
+
+img:last-child {
+  width: 100%;
+}
+
+img:not(img:last-child) {
+  width: 20%;
+}
+
+p:first-of-type:not(p:nth-child(2)) {
+  background-color: brown;
+}
+
+h1:nth-child(1) {
+  background-color: antiquewhite;
+}
+
+.biti-ce-u-provjeri::after {
+  content: "Bit će u provjeri";
+  background-color: blueviolet;
+  margin-left: 5px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  height: 10px;
+  line-height: 10 px;
+  font-size: 8px;
+}
+
+::marker {
+  content: "#";
+  font-size: 30px;
+}
+
+/*dohvati sve dtove kojima je predak
+main*/
+
+main dt {
+  background-color: blue;
+}
+
+/*dohvati sve dtove kojima je main otac
+tj da su dtovi djeca od maina*/
+
+main > dt {
+  color: red;
+}
+
+div + div {
+  transform: rotateZ(30deg);
+}
+
+div ~ h1 {
+  font-size: 72px;
+}

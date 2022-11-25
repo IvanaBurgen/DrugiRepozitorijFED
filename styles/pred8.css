@@ -1,0 +1,145 @@
+/*univerzalni selektor se koristi da 'ubije' sve ono što nam
+browser daje, npr margine i sve te gluposti
+mi ne želimo da se na različitim browserima
+ili uređajima drugačije prikazuje pa
+treba paziti*/
+
+/*box sizing: border box nam govori da izračun dimenzija elemenata
+se radi po načinu
+način izračuna širine i visine elementa je takav da se
+samo središnji sadržaj izračuna i to su dimenzije html
+elementa - to nije dobro
+mi dimenzije elemenata želimo računati do bordera tako
+da dimenzija elementa bude border + padding + sadržaj
+
+
+padding je nadopuna do bordera*/
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*inline level elementu ne možeš zapovijedati s veličinom
+to je npr <b>
+display: inline block
+inline blocku možeš specificirati dimenzije - on inače uzme
+dimenzije kao inline, ali mu možeš specificirati koliko i treba
+*/
+
+body {
+  background-color: bisque;
+}
+
+/**vh je viewport height*/
+header {
+  height: 15vh;
+  background-color: aquamarine;
+}
+
+main {
+  min-height: 70vh;
+}
+
+footer {
+  height: 15vh;
+  background-color: aquamarine;
+}
+
+h1 {
+  color: brown;
+}
+
+h2 {
+  color: rgba(250, 4, 4, 0.5);
+}
+
+/*ako se zahtjev npr kao ovaj nalazi kao internal css,
+tko ima prednost? external css ili internal css u head-u?
+internal i external nemaju nikakve prioritete jedan nad drugim
+
+internal se u ovom slučaju stavio prije jer je na vrhu html koda,
+a external dolazi kasnije s naslovima. prednost ima onaj koji dolazi
+zadnji po redu
+
+inline stile ima najveću prednost nad svima, da smo stavili
+zapovijed unutar h1, on bi bio 'glavni'
+
+selektori se grupiraju samo sa zarezima*/
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  color: purple;
+}
+
+/*razlika između ovih level elemenata:
+display as inline: poput <span> elementa, unutar linije, bilo kakva promjena visine i širine neće imati utjecaj, zauzme samo onoliko koliko treba
+as inline-block: mogu se mijenjati širina i visina, nešto između inlinea i blocka
+as block: uzima cijelu širinu, počinje u novom redu, poput <p>
+
+block je po prirodi bezobrazan, uzme cijelu širinu roditelja*/
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+b {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  border: 5px solid black;
+}
+
+/*selektori atributa iz html koda*/
+
+[href] {
+  font-style: italic;
+}
+
+/*hvata atribut koji ima određenu vrijednost atributa*/
+
+[href="#osimi"] {
+  font-size: 24px;
+}
+
+/* traži izdvojenu riječ u value, konkretno tu riječu */
+[hhh~="vodi"] {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* pocinje sa rijeci popracenom - */
+[class|="header"] {
+  background-color: yellow;
+}
+
+/* pocinje sa rjeci */
+[class^="header"] {
+  transform: rotateY(180deg);
+}
+
+[hhh$="dinama"] {
+  transform: rotatex(180deg);
+}
+
+[hhh*="iv-di"] {
+  font-weight: 900;
+}
+
+/*mora biti element b, i završavati value na 'ma'*/
+
+b[id$="ma"] {
+  color: blue;
+}
+
+/*KOMBINATOR selektora, html element tipa section i da je na tom elementu klasa plavi*/
+
+section.plavi {
+  text-decoration: underline;
+}

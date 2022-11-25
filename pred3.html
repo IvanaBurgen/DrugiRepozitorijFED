@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predavanje 3</title>
+  </head>
+  <body>
+    <!--forma-->
+    <!--to su inputi za ispunjavanje npr podataka-->
+
+    <form action="#" method="get">
+      <input type="text" /><br />
+      <input type="email" /><br />
+      <input type="date" /><br />
+      <input type="number" /><br />
+
+      <!--atribut fname koji ima parametar name, value daje početnu vrijednost koja se može
+    mijenjati kasnije-->
+      <!--vide se u linku s get metodom svi unešeni podaci koji su gore,
+    a # koji se vidi je taj action koji nas vraća na našu
+početnu stranicu, za to služi hešteg, može se slati i 
+negdje drugdje, server npr-->
+      <!--kod post metode ne možemo vidjeti što smo unijeli, odnosno
+ona osoba koja želi presresti to ne može vidjeti-->
+
+      <!--TEXT INPUTI-->
+
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" value="John" required /><br />
+      <label for="lname">Last name:</label><br />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        value="Doe"
+        size="300"
+      /><br /><br />
+
+      <label for="placa">Odaberite zeljeni iznos place</label><br />
+      <input type="range" id="placa" name="placa" min"0" max"100000"><br /><br />
+
+      <!--radio botuni-->
+
+      <!--radio gumbi, dakle input type radio nam govori da može biti
+    SAMO JEDAN odabir isto dajemo id tj oznaku npr html za gumb
+i ondak asnije vraćamo value html, a ti radio gumbi se mogu povezati i razdovjiti
+po grupama ako je to nužno
+inputi koji će biti grupirani moraju imati isti NAME-->
+
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label for="html">HTML</label><br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label for="css">CSS</label><br />
+      <input
+        type="radio"
+        id="javascript"
+        name="fav_language"
+        value="JavaScript"
+      />
+      <label for="javascript">JavaScript</label><br /><br />
+
+      <!--checkboxi, više opcija da se može označiti-->
+
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br />
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle2"> I have a car</label><br />
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle3"> I have a boat</label><br />
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!--tablica-->
+    <table border="1" style="width: 100%; height: 700px">
+      <colgroup>
+        <col span="3" style="background-color: green" />
+      </colgroup>
+      <caption>
+        Stepenice
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="7">Naslovna celija <b>thead</b></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th colspan="6"></th>
+          <th rowspan="7"></th>
+        </tr>
+
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th rowspan="4"></th>
+        </tr>
+
+        <tr>
+          <th></th>
+          <th></th>
+          <th rowspan="3"></th>
+          <th colspan="2"></th>
+        </tr>
+
+        <tr>
+          <th></th>
+          <th rowspan="2"></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="7">Footer celija <b>tfooter</b></th>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+
+    <p>Use the multiple attribute to allow the user to select more than one value.</p>
+
+<form action="#" method="get">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+  </body>
+</html>

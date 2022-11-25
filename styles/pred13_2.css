@@ -1,0 +1,70 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template: "header header header" 20fr "sidebar glv glv" 40fr "sidebar vj1 vj2" 40fr / 20fr 40fr 40fr;
+  row-gap: 10px;
+  column-gap: 15px;
+  padding: 10px;
+  justify-items: flex-end;
+  /*poravnanje po vertikalnoj osi unutar matrice*/
+  align-items: center;
+  /*poravnanje po horizontalnoj osi*/
+  place-items: center/flex-end;
+}
+
+/*KAKO OVO IZGLEDA NA EKRANU
+u grid templateu smo definirali matricu 3x3
+template area nam izgleda 
+header header header
+sidebar glv glv
+sidebar vj1 vj2    ---------->i ovo je izgled matrice
+
+header nam ide kroz prvi redak i kroz tri stupca, flex end mu ide skroz na kraj, znači na kraj ej pomaknut u tom dijelu matricew
+isto tako se nalazi u centru unutar matrice gdje je definiran
+
+section nam je u biti definiran kao sidebar i ide kroz drugi i treći red, ali samo prva kolumna
+glv je samo u drugom redu, ali druga i treća kolumna
+
+vj1 je treći red, druga kolumna, vj 2 treći red, treća kolumna
+*/
+
+header {
+  background-color: aqua;
+  grid-area: header;
+  width: 50%;
+  height: 50%;
+}
+
+section {
+  background-color: coral;
+  grid-area: sidebar;
+  width: 50%;
+  height: 50%;
+}
+
+article:nth-of-type(1) {
+  background-color: darkgrey;
+  grid-area: glv;
+  width: 50%;
+  height: 50%;
+}
+
+article:nth-of-type(2) {
+  background-color: rgb(129, 18, 18);
+  grid-area: vj1;
+  width: 50%;
+  height: 50%;
+}
+
+article:nth-of-type(3) {
+  background-color: rgb(143, 156, 23);
+  grid-area: vj2;
+  width: 50%;
+  height: 50%;
+}

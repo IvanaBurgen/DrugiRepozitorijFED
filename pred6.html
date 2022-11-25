@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedija i semantičko strukturiranje stranice</title>
+  </head>
+  <body>
+    <header>
+      <h1>Predavanje 6</h1>
+      <span>Učili smo: </span>
+      <nav>
+        <a href="#audio">AUDIO</a> |
+        <a href="#nesemantickoGrupiranje">NESEMANTIČKO GRUPIRANJE</a> | <a href="#HTML">HTML</a>
+      </nav>
+    </header>
+
+    <main style="display: inline-block;width:70%; vertical-align: top;">
+      <section id="audio">
+        <h1>Učenje audio tagova</h1>
+        <!--Audio-->
+
+        <audio control></audio>
+      </section>
+
+      <!--i ovo je sekcija jer nije samostalno-->
+
+      <section id="nesemantickoGrupiranje">
+        <!--klasični tag za grupirati sadržaj u HTML-u, div element je blockelement. on zauzima cijelu širinu web stranice-->
+        <header>
+          <h1>Nesemantičko grupiranje elemenata</h1>
+          <p>
+            Pokazujemo div i span elemente s kojima se prije pojave HTML5
+            isključivo grupirao sadržaj
+          </p>
+        </header>
+        <div>
+          <h1>Ivana Bunjan</h1>
+          <h4>Studentica na Algebri koja uči:</h4>
+          <ul>
+            <li>fronte-end inženjering</li>
+          </ul>
+        </div>
+
+        <!--klasični tag za grupirati elemente, ali on je inline level. Što znači inline? On zauzima točno onoliko mjesta koliko treba i ne
+      kreće u novom redu-->
+
+        <span>
+          posjeti nas na <a href="#">kljfdgkjlgfd</a><br /><br />
+          <figure> <!--blocklevel element, uzeo je sve od maina koliko ide-->
+          <img width="300" height="300" src="./DSC_6162.jpg" />
+          <figcaption>Na slici se vidi jedna alpaka</figcaption>
+        </figure>
+        </span>
+      </section>
+
+      <article>
+        <h1>HTML </h1>
+        <h4>- Jezik za označavnje strukture i sadržaja na web-u</h4>
+        <p>
+            <div class="mw-parser-output"><p><b>HTML</b> je kratica za <b>HyperText Markup Language</b>, što znači prezentacijski&nbsp;jezik&nbsp;za izradu web stranica. Hipertekst dokument stvara se pomoću HTML jezika. HTML jezikom oblikuje se sadržaj i stvaraju se hiperveze <a href="/wiki/Hipertekst" title="Hipertekst">hipertekst</a> dokumenta. HTML je jednostavan za uporabu i lako se uči, što je jedan od razloga njegove opće prihvaćenosti i popularnosti. Svoju raširenost zahvaljuje jednostavnosti i tome što je od početka bio zamišljen kao besplatan i tako dostupan svima. Prikaz hipertekst dokumenta omogućuje web preglednik. Temeljna zadaća HTML jezika jest uputiti web preglednik kako prikazati <a href="/wiki/Hipertekst" title="Hipertekst">hipertekst</a> dokument. Pri tome se nastoji da taj dokument izgleda jednako bez obzira o kojemu je web pregledniku, računalu i operacijskom sustavu riječ. HTML nije programski jezik niti su ljudi koji ga koriste programeri. Njime ne možemo izvršiti nikakvu zadaću, pa čak ni najjednostavniju operaciju zbrajanja ili oduzimanja dvaju cijelih brojeva. On služi samo za opis naših hipertekstualnih dokumenata. Html datoteke su zapravo obične tekstualne <a href="/wiki/Datoteka" title="Datoteka">datoteke</a>, ekstenzija im je .html ili .htm. Osnovni građevni element svake stranice su znakovi (tags) koji opisuju kako će se nešto prikazati u web pregledniku. Poveznice unutar HTML dokumenata povezuju dokumente u uređenu hijerarhijsku strukturu i time određuju način na koji posjetitelj doživljava sadržaj stranica. 
+</p>
+
+      </article>
+    </main>
+<aside style="display: inline-block;width:20%; vertical-align:top">
+<h1>Algebra</h1>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur doloremque a omnis nesciunt quibusdam repudiandae beatae voluptatem dolore ipsum laudantium, harum officia eaque, voluptas quisquam cumque quae unde, esse eligendi.</p>
+</aside>
+    <footer>
+        <p>Ivana Bunjan</p>
+    </footer>
+  </body>
+</html>

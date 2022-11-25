@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predavanje 21.10.2022. - Selektori CSS</title>
+    <link rel="stylesheet" href="./styles/pred8.css" />
+    <!--ovo je način linkanja css file sa stilom-->
+
+    <style>
+      h1,
+      h2 {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <!--GRUPIRANJE SELEKTORA
+    -deklaracijski blok i sve što smo naveli unutar njega, tj deklarirali se odnosi na sve selektore ispred njega, 1 ili više njih-->
+    <header>
+      <h1 class="header-heading">Vježba selektori CSS</h1>
+      <nav>
+        <ul>
+          <li><a href="#onama">O nama</a></li>
+          <li><a href="#ovama">O vama</a></li>
+          <li><a href="#osimi">O Šimi</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="color: blue">Pokazna vježba</h1>
+      <section id="onama">
+        <h2 class="plavi">O nama</h2>
+        <p hhh="hajduk vodi protiv-dinama">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+          voluptatem magni possimus enim distinctio unde totam corrupti vitae ad
+          non, consectetur modi tenetur iure soluta dolorum. Quidem laudantium
+          sed assumenda! Ex cumque sapiente voluptatum incidunt minus, sed, ea
+          necessitatibus expedita in perferendis pariatur quae tenetur doloribus
+          quibusdam illum soluta iure nam, ut laboriosam molestias fugiat
+          impedit at! Itaque, atque mollitia.
+        </p>
+      </section>
+
+      <section class="plavi" id="ovama">
+        <h2>O vama</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+          dolorum, fugiat, possimus cupiditate eaque perferendis reiciendis
+          voluptatem, veniam error iste deleniti dolore blanditiis perspiciatis?
+          Recusandae officiis inventore ipsam quam molestias. Ratione molestiae
+          velit placeat? Repellat quod, reiciendis, incidunt expedita tempore
+          illum delectus dignissimos saepe omnis praesentium obcaecati sapiente
+          ipsa maiores libero quibusdam fuga, dolorem labore natus adipisci id
+          totam. Reprehenderit.
+        </p>
+      </section>
+
+      <section id="osimi">
+        <h2>O Šimi</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+          dolorum, fugiat, possimus cupiditate eaque perferendis reiciendis
+          voluptatem, veniam error iste deleniti dolore blanditiis perspiciatis?
+          Recusandae officiis inventore ipsam quam molestias. Ratione molestiae
+          velit placeat? Repellat quod, reiciendis, incidunt expedita tempore
+          illum delectus dignissimos saepe omnis praesentium obcaecati sapiente
+          ipsa maiores libero quibusdam fuga, dolorem labore natus adipisci id
+          totam. Reprehenderit.
+        </p>
+      </section>
+      <b id="fama">kdfkdfkd</b>
+    </main>
+
+    <footer>
+      <p>Ovu stranicu sam napravila ja!</p>
+    </footer>
+  </body>
+</html>
