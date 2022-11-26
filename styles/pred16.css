@@ -1,0 +1,40 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex-item {
+  flex-basis: 100%;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+}
+
+/*ovo ovdje su postavke za rsponzivni dizajn koji ovisi
+o širini ekrana i koliko css pixela ima uređaj
+uzimamo kladu flex-item i mijenjamo joj flex basis ovisno
+o širini ekrana
+
+obavezno ide @media screen --> and je u biti booleova logika
+gdje se u obzir uzima 'i'*/
+
+@media screen and (min-width: 768px) {
+  .flex-item {
+    flex-basis: 48%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .flex-item {
+    flex-basis: 32%;
+  }
+}
